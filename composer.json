@@ -1,0 +1,44 @@
+{
+    "name": "G4b0rDev/filament-markdown-editor-cheatsheet",
+    "description": "Add markdown cheatsheet to the RichEditor form field in Filament",
+    "type": "package",
+    "version": "1.0",
+    "license": "MIT",
+    "keywords": [
+        "filament",
+        "markdown",
+        "cheatsheet"
+    ],
+    "autoload": {
+        "psr-4": {
+            "FilamentMarkdownEditorCheatsheet\\": "src/",
+            "FilamentMarkdownEditorCheatsheet\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "FilamentMarkdownEditorCheatsheet\\FilamentMarkdownEditorCheatsheetServiceProvider"
+            ]
+        }
+    },
+    "require-dev": {
+        "filament/filament": "^3.2",
+        "orchestra/testbench": "^9.5",
+        "pestphp/pest": "^3.5",
+        "pestphp/pest-plugin-laravel": "^3.0",
+        "tightenco/duster": "^3.0"
+    },
+    "require": {
+        "php": "^8.1",
+        "spatie/laravel-package-tools": "^1.16"
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}

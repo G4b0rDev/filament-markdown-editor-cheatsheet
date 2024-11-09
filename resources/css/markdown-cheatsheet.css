@@ -1,0 +1,14 @@
+@import '../../node_modules/highlight.js/styles/github-dark-dimmed.min.css';
+@config '../../tailwindcss.config.js';
+
+.markdown-cheatsheet-sections {
+    @apply space-y-10 pt-10;
+}
+
+.markdown-cheatsheet-sections div h3 {
+    @apply mb-4;
+}
+
+.markdown-cheatsheet-sections div pre code {
+    @apply rounded-lg;
+}

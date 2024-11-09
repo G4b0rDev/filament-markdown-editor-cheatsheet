@@ -1,0 +1,43 @@
+name: Duster Fix
+
+on:
+    push:
+        branches: [ main ]
+    pull_request:
+
+jobs:
+  duster:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref }}
+
+      - name: "Duster fix"
+        uses: tighten/duster-action@v3
+        with:
+          args: fix
+        continue-on-error: true
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+
+      - name: Install Node.js dependencies
+        run: npm ci
+
+      - name: Run Prettier on JS and CSS files
+        run: npx prettier --write "resources/js/**/*.js" "resources/css/**/*.css"
+
+      - uses: stefanzweifel/git-auto-commit-action@v5
+        id: auto_commit_action
+        with:
+          commit_message: "style(lint): apply auto-fixes from linting"
+
+      - name: Ignore Duster commit in git blame
+        if: steps.auto_commit_action.outputs.changes_detected == 'true'
+        run: echo ${{ steps.auto_commit_action.outputs.commit_hash }} >> .git-blame-ignore-revs
+
