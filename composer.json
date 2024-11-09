@@ -1,5 +1,5 @@
 {
-    "name": "G4b0rDev/filament-markdown-editor-cheatsheet",
+    "name": "g4b0rdev/filament-markdown-editor-cheatsheet",
     "description": "Add markdown cheatsheet to the RichEditor form field in Filament",
     "type": "package",
     "version": "1.0",
