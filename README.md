@@ -32,6 +32,8 @@ RichEditor::make('content')
 
 // or
 
+use Filament\Forms\Components\MarkdownEditor;
+
 MarkdownEditor::make('content')
     ->withCheatsheet()
     ->...,
@@ -47,6 +49,8 @@ RichEditor::make('content')
     ->...,
 
 // or
+
+use Filament\Forms\Components\MarkdownEditor;
 
 MarkdownEditor::make('content')
     ->withCheatsheet(slideOver: true)
