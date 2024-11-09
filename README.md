@@ -14,7 +14,7 @@ This module helps users quickly reference Markdown syntax and apply it.
 To install the `filament-markdown-editor-cheatsheet` module, you can use the following command:
 
 ```bash
-composer require G4b0rDev/filament-markdown-editor-cheatsheet
+composer require g4b0rdev/filament-markdown-editor-cheatsheet
 ```
 
 ## Usage
