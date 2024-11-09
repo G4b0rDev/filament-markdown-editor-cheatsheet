@@ -53,4 +53,3 @@ class FilamentMarkdownEditorCheatsheetServiceProvider extends PackageServiceProv
         ], 'markdown-cheatsheet');
     }
 }
-
