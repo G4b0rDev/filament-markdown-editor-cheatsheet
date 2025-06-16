@@ -32,7 +32,7 @@ jobs:
       - name: Run Prettier on JS and CSS files
         run: npx prettier --write "resources/js/**/*.js" "resources/css/**/*.css"
 
-      - uses: stefanzweifel/git-auto-commit-action@v5
+      - uses: stefanzweifel/git-auto-commit-action@v6
         id: auto_commit_action
         with:
           commit_message: "style(lint): apply auto-fixes from linting"
