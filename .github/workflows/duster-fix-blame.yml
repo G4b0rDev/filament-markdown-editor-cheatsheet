@@ -24,7 +24,7 @@ jobs:
         continue-on-error: true
 
       - name: Set up Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
 
       - name: Install Node.js dependencies
         run: npm ci
